@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Calculator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .wrapper {
+            width: 100%;
+            height: 100vh;
+            background: #0b606e;
+            display: grid;
+            place-items: center;
+        }
+        
+        .box {
+            width: 910px;
+            height: 500px;
+            background: rgb(5, 39, 73);
+            border-radius: 5px;
+            box-shadow: 7px 7px 9px rgb(0, 0, 0, 0.2), -2px -2px 9px rgb(85, 150, 165);
+            color: white;
+            font-family: sans-serif;
+            font-size: 1.3rem;
+        }
+        
+        h1 {
+            color: rgb(0, 174, 255);
+            font-family: sans-serif;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 1.7rem;
+            text-decoration: underline;
+            offset: 3;
+        }
+        
+        h2 {
+            color: #fff;
+            font-family: sans-serif;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 1.7rem;
+        }
+        
+        input {
+            width: 3.3rem;
+            height: 1.73rem;
+            background: transparent;
+            border: 3px solid rgb(0, 247, 255);
+            margin-top: 0.98rem;
+            color: white;
+            padding: 0px 10px;
+        }
+        
+        #fname {
+            width: 190px;
+            border-top: none;
+            border-right: none;
+            border-left: none;
+            margin-left: 22.3rem;
+        }
+        
+        #cos {
+            margin-left: 3px;
+        }
+        
+        #act {
+            margin-left: 6.2rem;
+        }
+        
+        #mth {
+            margin-left: 8rem;
+        }
+        
+        #eng {
+            margin-left: 6.7rem;
+        }
+        
+        #eco {
+            margin-left: 5rem;
+        }
+        
+        label {
+            margin-left: 1.7rem;
+        }
+        
+        input:focus {
+            outline: none;
+        }
+        
+        h3 {
+            color: #fff;
+            font-family: sans-serif;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 1.7rem;
+        }
+        
+        #des {
+            width: 65%;
+            height: 15.50rem;
+            /* border: 1px solid red;*/
+            border-radius: 7px;
+            margin-top: -17.11rem;
+            margin-left: 18.5rem;
+            background: rgb(5, 39, 73);
+            box-shadow: 7px 7px 9px rgb(0, 0, 0, 0.2), -2px -2px 9px rgb(85, 150, 165);
+        }
+        
+        #info {
+            color: #fff;
+            font-family: sans-serif;
+            font-weight: lighter;
+            text-align: center;
+            margin-top: 1.7rem;
+            font-size: 1.8rem;
+            margin-bottom: 1.7rem;
+            padding: 1rem 2.8rem;
+            box-sizing: border-box;
+        }
+        
+        #calc {
+            width: 170px;
+            height: 37px;
+            background: gray;
+            margin-left: 3.3rem;
+            border-radius: 25px;
+            margin-top: 1rem;
+            color: whitesmoke;
+            outline: none;
+            border: none;
+            cursor: pointer;
+            box-shadow: 7px 7px 9px rgb(0, 0, 0, 0.2), -1px -1px 5px rgb(85, 150, 165);
+        }
+        /*------------THIS IS STYLE FOR MOBILE PHONE AND TABLET USING MEDIA QUERY SCREEN------------*/
+        
+        @media only screen and (max-width: 950px) {
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            .box {
+                width: 100%;
+                height: 100%;
+                background: rgb(5, 39, 73);
+                border-radius: 5px;
+                box-shadow: 7px 7px 9px rgb(0, 0, 0, 0.2), -2px -2px 9px rgb(85, 150, 165);
+                color: white;
+                font-family: sans-serif;
+                font-size: 1.3rem;
+                display: grid;
+                place-items: center;
+            }
+            h1 {
+                color: #fff;
+                font-family: sans-serif;
+                font-weight: bold;
+                text-align: center;
+                margin-top: 1.7rem;
+                text-decoration: underline;
+                offset: 3;
+            }
+            h2 {
+                color: #fff;
+                font-family: sans-serif;
+                font-weight: bold;
+                text-align: center;
+                margin-top: 1.7rem;
+            }
+            input {
+                width: 3.3rem;
+                height: 1.73rem;
+                background: transparent;
+                border: 3px solid rgb(0, 247, 255);
+                margin-top: 0.98rem;
+                color: white;
+                padding: 0px 10px;
+            }
+            #fname {
+                width: 190px;
+                border-top: none;
+                border-right: none;
+                border-left: none;
+                margin-left: 0.1rem;
+            }
+            #cos {
+                margin-left: 3px;
+            }
+            #act {
+                margin-left: 6.2rem;
+            }
+            #mth {
+                margin-left: 8rem;
+            }
+            #eng {
+                margin-left: 6.7rem;
+            }
+            #eco {
+                margin-left: 5rem;
+            }
+            label {
+                margin-left: 1.7rem;
+            }
+            input:focus {
+                outline: none;
+            }
+            h3 {
+                color: #fff;
+                font-family: sans-serif;
+                font-weight: bold;
+                text-align: center;
+                margin-top: 1.7rem;
+            }
+            #des {
+                width: 81%;
+                height: auto;
+                /* border: 1px solid red;*/
+                border-radius: 7px;
+                margin-top: 5rem;
+                margin-left: 0rem;
+                background: rgb(5, 39, 73);
+                box-shadow: 7px 7px 9px rgb(0, 0, 0, 0.2), -2px -2px 9px rgb(85, 150, 165);
+            }
+            #info {
+                color: #fff;
+                font-family: sans-serif;
+                font-weight: lighter;
+                text-align: center;
+                margin-top: 1.7rem;
+                margin-bottom: 1.7rem;
+                padding: 0rem 0.8rem;
+                box-sizing: border-box;
+            }
+            #calc {
+                width: 170px;
+                height: 37px;
+                background: gray;
+                margin-left: 0.9rem;
+                border-radius: 25px;
+                margin-top: 1rem;
+                color: whitesmoke;
+                outline: none;
+                border: none;
+                cursor: pointer;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="box">
+            <h1>MARKS CALCULATOR</h1>
+
+            <h3>Enter Your Name</h2>
+                <input id="fname" type="text" name="your marks"> <br>
+                <label id="p" for="computer">Computer Science: <input id="cos"   type="text" name="your marks"><br></label>
+                <label id="pp " for="Account"> Account: <input id="act" type="text" name="your marks"> <br></label>
+                <label id="ppp" for="Math">Math: <input id="mth" type="text" name="your marks"><br></label>
+                <label id="pppp" for="English"> English: <input id="eng" type="text" name="your marks"><br></label>
+                <label id="ppppp" for="Economics"> Economics:<input id="eco" type="text" name="your marks"><br></label>
+
+
+
+
+                <button onclick="submit()" id="calc"> Get Grade</button>
+                <div id="des">
+                    <h2 id="info">
+                    </h2>
+                </div>
+                <footer>
+                    <h3>Note:This is only for educational purposes!</h3>
+                </footer>
+        </div>
+    </div>
+    <script type="text/javascript ">
+        document.getElementById('des').style.display = 'none';
+
+        const submit = () => {
+            document.getElementById('des').style.display = 'block';
+
+
+            var name = document.getElementById('fname').value;
+
+            var computer = document.getElementById('cos').value;
+            var account = document.getElementById('act').value;
+            var math = document.getElementById('mth').value;
+            var english = document.getElementById('eng').value;
+            var economics = document.getElementById('eco').value;
+
+
+            var Total = parseFloat(computer) + parseFloat(account) + parseFloat(math) + parseFloat(english) + parseFloat(economics);
+
+
+            var per = parseFloat(Total / 500) * 100;
+            var percentage = per.toFixed(2);
+
+            var Gradenumber = parseFloat(percentage) / 100 * 4;
+            var gpa = Gradenumber.toFixed(2);
+
+
+            if (percentage >= 90 && percentage <= 100) {
+                document.getElementById('info').innerHTML = `Congratulation ${name}, You have passed  the exam with  Honours. Your PERCENTAGE is ${percentage}% and GPA is ${gpa}[ A+ ]  and  Your Total is [ ${Total} out of 500 ].
+             Wish you all the best for your future and hope you will sucess.`;
+
+            } else if (percentage >= 80 && percentage <= 89) {
+                document.getElementById('info').innerHTML = `Great ${name},  You have passed  the exam with  Distinction. Your PERCENTAGE is ${percentage}%  and GPA is ${gpa}[ A ] and  Your Total is [ ${Total}out of 500 ]. You are now one step closer to your dream. Never stop and work harder.`;
+
+            } else if (percentage >= 70 && percentage <= 79) {
+                document.getElementById('info').innerHTML = `Wow ${name},  You have passed  the exam with  1st Division. Your PERCENTAGE is ${percentage}%  and GPA is  ${gpa} [ B+ ] and  Your Total is [ ${Total}out of 500 ]. Now it time to show your worth. Focus on your dream and work more harder.`;
+
+            } else if (percentage >= 60 && percentage <= 69) {
+                document.getElementById('info').innerHTML = `Well Done ${name}, You have passed  the exam with  1st Division. Your PERCENTAGE is ${percentage}% and GPA is ${gpa} [ B ] and  Your Total is [ ${Total}out of 500 ]. You are good but not enough. So, Work harder and  make your dream come true.`;
+
+            } else if (percentage >= 50 && percentage <= 59) {
+                document.getElementById('info').innerHTML = `Well Done ${name}, You have passed  the exam with 2nd Division. Your PERCENTAGE is ${percentage}% and GPA is  ${gpa} [ C+ ] and  Your Total is [ ${Total}out of 500 ].  This result doesnt show you bad but it just  remind  You have to work more Harder and you will be sucess .`;
+
+            } else if (percentage >= 45 && percentage <= 49) {
+                document.getElementById('info').innerHTML = `Nice ${name}, You have passed  the examwith 2nd Division.  Your PERCENTAGE is ${percentage}%  and GPA is ${gpa} [ C ] and  Your Total is [ ${Total}out of 500 ].This is not your what you worth. You have to  Work hard more than other.`;
+            } else if (percentage >= 35 && percentage <= 44) {
+                document.getElementById('info').innerHTML = `Nice ${name},  You have passed the exam with 3rd Division.  Your PERCENTAGE is  ${percentage}% and  GPA is  ${gpa} [ D+ ] and  Your Total is [ ${Total}out of 500 ]. Don't fell low Work harder because result doest not measure intilligent.`;
+            } else {
+                document.getElementById('info').innerHTML = `Sorry ${name}, You did not Sucess in this attemp. Your PERCENTAGE is  ${percentage}%  and GPA is ${gpa} [less than D+] and  Your Total is [ ${Total}out of 500 ]. Don't lose hope. This is no the end and nver will be.Try your best in next time.  `;
+
+            }
+
+
+            if (computer < 33 || account < 33 || math < 33 || english < 33 || economics < 33) {
+                document.getElementById('info').innerHTML = `Sorry ${name}, You did not sucess int this attemp. Your PERCENTAGE is  ${percentage}%  and GPA is ${gpa} [less than D+] and  Your Total is [ ${Total}out of 500 ]. Don't lose hope. This is no the end and nver will be.Try your best in next time.  `;
+
+            }
+
+
+            if (computer <= 32) {
+                alert("you failed in computer ");
+            }
+
+            if (account <= 32) {
+                alert("you failed in account ");
+            }
+            if (math <= 32) {
+                alert("you failed in math ");
+            }
+            if (english <= 32) {
+                alert("you failed in english ");
+            }
+            if (economics <= 32) {
+                alert("you failed in economics ");
+            }
+
+
+
+            if (name == '') {
+                alert("Sorry Enter Your Name");
+                document.getElementById('fname').style.borderBottom = '3px solid red';
+                document.getElementById('des').style.display = 'none';
+
+
+            }
+
+            //
+
+            if (computer > 100) {
+
+                document.getElementById('cos').style.border = ' 3px solid red';
+                //  alert('Please enter your marks less than 100 ');
+                document.getElementById('des').style.display = 'none';
+
+            }
+
+
+            if (account > 100) {
+
+                document.getElementById('act').style.border = ' 3px solid red';
+                //  alert('Please enter your marks less than 100 ');
+                document.getElementById('des').style.display = 'none';
+
+            }
+
+            if (math > 100) {
+
+                document.getElementById('mth').style.border = ' 3px solid red';
+                // alert('Please enter your marks less than 100 ');
+                document.getElementById('des').style.display = 'none';
+
+            }
+
+            if (english > 100) {
+
+                document.getElementById('eng').style.border = ' 3px solid red';
+                // alert('Please enter your marks less than 100 ');
+                document.getElementById('des').style.display = 'none';
+
+            }
+
+            if (economics > 100) {
+
+                document.getElementById('eco').style.border = ' 3px solid red';
+                //alert('Please enter your marks less than 100 ');
+                document.getElementById('des').style.display = 'none';
+
+            }
+
+            //---------------------------------------------
+            if (computer < 35) {
+
+                document.getElementById('cos').style.border = ' 3px solid red';
+                //  alert('Please enter your marks less than 100 ');
+
+            }
+
+
+            if (account < 35) {
+
+                document.getElementById('act').style.border = ' 3px solid red';
+                //  alert('Please enter your marks less than 100 ');
+
+            }
+
+            if (math < 35) {
+
+                document.getElementById('mth').style.border = ' 3px solid red';
+                // alert('Please enter your marks less than 100 ');
+
+            }
+
+            if (english < 35) {
+
+                document.getElementById('eng').style.border = ' 3px solid red';
+                // alert('Please enter your marks less than 100 ');
+
+            }
+
+            if (economics < 35) {
+
+                document.getElementById('eco').style.border = ' 3px solid red';
+                //alert('Please enter your marks less than 100 ');
+
+            }
+
+            //-------------------------
+
+            if (computer > 100 || account > 100 || math > 100 || english > 100 || economics > 100) {
+                alert('Please enter your marks less than 100 ');
+            }
+
+            //----------------------------------------------------------------------
+
+
+
+            if (computer == []) {
+                document.getElementById('cos').style.border = ' 3px solid red';
+            }
+
+            if (account == []) {
+                document.getElementById('act').style.border = ' 3px solid red';
+            }
+
+            if (math == []) {
+                document.getElementById('mth').style.border = ' 3px solid red';
+            }
+
+            if (english == []) {
+                document.getElementById('eng').style.border = ' 3px solid red';
+            }
+
+            if (economics == []) {
+                document.getElementById('eco').style.border = ' 3px solid red';
+            }
+
+
+
+
+
+
+            if (computer == [] || account == [] || math == [] || english == [] || economics == []) {
+
+                alert('Make Sure That you Have Fill All The Input Field');
+                //     //  document.getElementById('des').style.display = 'none';
+                document.getElementById('info').innerHTML = `Please ${name} Enter Your All Marks in the input box to know Percentage,Grade and GPA`;
+
+
+            }
+
+
+
+
+            //     alert(` congrats ${name} 
+            //    --- you have got ${computer} in Computer
+            //    --- you have got ${account} in Account
+            //    --- you have got ${math} in Math
+            //    --- you have got ${english} in English
+            //    --- you have got ${economics} in Economics
+
+            //      Total is :${Total}
+
+            //      Percent is :c
+
+            //      GPA is :${gpa} 
+
+            //     `);
+
+            //     ;
+
+
+
+        }
+    </script>
+</body>
+
+</html>
