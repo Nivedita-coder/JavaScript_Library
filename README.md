@@ -1,6 +1,6 @@
 # JavaScript_Library
 
-#### Some cool collection of JavaScript codes.
+#### Some cool collection of JavaScript codes:)
 
 ## Steps to contribute:
 (1) Fork the repository.
