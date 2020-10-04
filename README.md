@@ -29,12 +29,7 @@ Pull requests should include the following:
 - Place your Code in the appropriate folder with a README and information on the code
 
 
-### Languages Used Already:
 
-- C
-- CPP
-- Python
-- HTML
 =======
 ## Steps to contribute :
 1. Fork the repository
