@@ -1,21 +1,143 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="creator.css">
-    <title>The Random Quote App</title>
-</head>
-<body>
-    <div>
-        <h2>Today's Quote For You</h2>
-        <p>Press the button</p>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,500');
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  vertical-align: baseline;
+}
 
-        <button onclick="createQuote();">Get Quote</button>
-        <p id="quoteOut"></p>
-        <p id="authorOut"></p>
+div {
+  position: relative;
+  z-index: 2;
+}
+
+body {
+  background-color: #333;
+  color: #333;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.footer {
+  width: 450px;
+  text-align: center;
+  display: block;
+  margin: 15px auto 30px auto;
+  font-size: 0.8em;
+  color: #fff;
+  a {
+    font-weight: 500;
+    text-decoration: none;
+    color: #fff;
+  }
+}
+#quote-box {
+  border-radius: 3px;
+  position: relative;
+  //margin:8% auto auto auto;
+  width: 450px;
+  padding: 40px 50px;
+  display: table;
+  background-color: #fff;
+  .quote-text {
+    i {
+      font-size: 1em;
+      margin-right: 0.4em;
+    }
+    text-align: center;
+    width: 450px;
+    height: auto;
+    clear: both;
+    font-weight: 500;
+    font-size: 1.75em;
+  }
+  .quote-author {
+    width: 450px;
+    height: auto;
+    clear: both;
+    padding-top: 20px;
+    font-size: 1em;
+    text-align: right;
+  }
+  .buttons {
+    width: 450px;
+    margin: auto;
+    display: block;
+    .button {
+      height: 38px;
+      border: none;
+      border-radius: 3px;
+      color: #fff;
+      background-color: #333;
+      outline: none;
+      font-size: 0.85em;
+      padding: 8px 18px 6px 18px;
+      margin-top: 30px;
+      opacity: 1;
+      cursor: pointer;
+      &:hover {
+        opacity: 0.9;
+      }
+      &#tweet-quote,
+      &#tumblr-quote {
+        float: left;
+        padding: 0px;
+        padding-top: 8px;
+        text-align: center;
+        font-size: 1.2em;
+        margin-right: 5px;
+        height: 30px;
+        width: 40px;
+      }
+      &#new-quote {
+        float: right;
+      }
+    }
+  }
+}
+</style>
+
+<link
+  rel="stylesheet"
+  href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-
+
+awesome.min.css"
+/>
+<div id="wrapper">
+  <div id="quote-box">
+    <div class="quote-text">
+      <i class="fa fa-quote-left"> </i><span id="text"></span>
     </div>
-    <script src="creator.js"></script>
-</body>
-</html>
+    <div class="quote-author">- <span id="author"></span></div>
+    <div class="buttons">
+      <a
+        class="button"
+        id="tweet-quote"
+        title="Tweet this quote!"
+        target="_blank"
+      >
+        <i class="fa fa-twitter"></i>
+      </a>
+      <a
+        class="button"
+        id="tumblr-quote"
+        title="Post this quote on tumblr!"
+        target="_blank"
+      >
+        <i class="fa fa-tumblr"></i>
+      </a>
+      <button class="button" id="new-quote">New quote</button>
+    </div>
+  </div>
+  <div class="footer">by <a href="https://codepen.io/hezag/">yash</a></div>
+</div>
+<script 
+
+src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-
+
+ui.min.js"></script>
