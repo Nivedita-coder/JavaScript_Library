@@ -1,0 +1,38 @@
+body {
+  text-align: center;
+  background-color: #F0F4EF;
+  margin-top: 10%;
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+  color: #344966;
+  font-size: 55px;
+}
+
+.button {
+  background-color: #344966;
+  color: #F0F4EF;
+  height: 50px;
+  width: 100px;
+  border-radius: 10%;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.03em;
+}
+
+.button:hover {
+  transform: scale(1.05) perspective(1px);
+}
+
+#bday {
+  background-color: #DEE9F7;
+}
+
+#result {
+  margin: 0 auto;
+  display: none;
+  border: none;
+  background-color: #DEE9F7;
+  color: #0D1821;
+  font-size: 30px;
+}
