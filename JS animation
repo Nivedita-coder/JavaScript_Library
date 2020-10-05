@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<style>
+#myContainer {
+  width: 4000px;
+  height: 4000px;
+  background: green;
+}
+#myAnimation {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  background-color: yellow;
+}
+</style>
+<body>
+
+<div id ="myContainer">
+<div id ="myAnimation"></div>
+</div>
+
+<script>
+function myMove() {
+  var elem = document.getElementById("myAnimation");   
+  var pos = 0;
+  var id = setInterval(frame, 10);
+  function frame() {
+    if (pos == 350) {
+      clearInterval(id);
+    } else {
+      pos++; 
+      elem.style.top = pos + 'px'; 
+      elem.style.left = pos + 'px'; 
+    }
+  }
+}
+</script>
+
+</body>
+</html>
