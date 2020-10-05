@@ -59,16 +59,16 @@ body {
   }
   
   #display {
-    width: 265px;
-    max-width: 270px;
-    font-size: 26px;
+    width: 348px;
+    max-width: 348px;
+    font-size: 25px;
     text-align: right;
     background-color: #bcbd95;
     float: left;
   }
   
   #display:hover {
-    width: 270px;
+    width: 348px;
     font-size: 26px;
     text-align: right;
     background-color: #bcbd95;
@@ -77,7 +77,7 @@ body {
   
   #display:active {
     top: 5px;
-    width: 270px;
+    width: 348px;
     font-size: 26px;
     text-align: right;
     background-color: #bcbd95;
