@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search GitHub user | Aldhaneka</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/fbfd4b3bb0.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- canvas for particle.js background -->
+    <div id="particles-js">
+
+    </div>
+
+    <!-- for search bar wrapper -->
+    <div class="container">
+        <!-- for search bar wrapper -->
+        <div class="searchWrappper">
+            <!-- title of this project -->
+            <h1>Search Github User</h1>
+            <!-- description of this project -->
+            <p>Search github user, found they, and follow them!</p>
+            <!-- search bar wrapper -->
+            <div class="search_wrapper">
+                <!-- search input -->
+                <input type="text" name="" id="search" placeholder="Who are you looking for?">
+                <!-- Search button -->
+                <button id="btn">!</button>
+            </div>
+        </div>
+    </div>
+    <!-- wrapper for cards -->
+    <div class="box">
+        <!-- default card / fallbacks if the API Goes wrong -->
+        <div class="card">
+            <div class="imgWrapper">
+                <img src="https://avatars1.githubusercontent.com/u/67791514?v=4" alt="">
+            </div>
+            <a href="https://github.com/Aldhanekaa" target="_blank">
+                <h4 id="name">Aldhaneka</h4>
+            </a>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS.load('particles-js', 'particles.json', function () {
+            console.log('callback - particles.js config loaded');
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>

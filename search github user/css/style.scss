@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+// function for flex
+@mixin flex($flex, $direction, $jc, $ai) {
+    display: $flex;
+    flex-direction: $direction;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+body {
+    position: relative;
+    background: #000;
+    color: #fff;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+// styles for particle js canvas
+#particles-js {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 350px;
+    background: #000;
+}
+
+// styles for container which its wrap the title of this project, description of this project, and the search bar
+.container {
+    width: 100%;
+    height:auto;
+    padding: 100px 0px;
+    box-sizing: none;
+    @include flex(flex, column, flex-start, center);
+    .searchWrappper {
+        z-index: 9999;
+        width: 60%;
+        height: 30%;
+        text-align: center;
+        h1 {
+            font-size: 60px;
+        }
+        .search_wrapper {
+            margin-top: 50px;
+            width: 100%;
+            height: 50px;
+            @include flex(flex, row, center, center);
+
+            #search {
+                box-sizing: border-box;
+                padding: 0 10px;
+                width: 50%;
+                height: 100%;
+                font-size: 20px;
+            }
+            #btn {
+                width: 50px;
+                height: 100%;
+                background: #000;
+                font-size: 20px;
+                color: #fff;
+            }
+        }
+    }
+}
+
+// styles for box which its wrap the cards that will generate
+.box {
+    margin: 20px auto 0 auto;
+    z-index: 999;
+    background: #000;
+    box-sizing: none;
+    padding: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+    .card {
+        margin: 20px 10px 10px 10px;
+        height: auto;
+        padding: 25px 30px 50px 30px;
+        background: #fff;
+        @include flex(flex, column, flex-start, center);
+
+        .imgWrapper {
+            width: 75px;
+            height: 75px;
+            img {
+                width: 100%;
+            }
+        }
+        a {
+            text-decoration: none;
+            box-sizing: border-box;
+            color: #000;
+            &:active {
+                border: 1px dotted #000;
+            }
+            &:hover {
+                text-decoration: underline;
+            }
+            #name {
+                margin-top: 10px;
+                font-size: 20px;
+            }
+        }
+    }
+}
