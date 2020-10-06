@@ -9,6 +9,8 @@ document.addEventListener("DOMContentLoaded", () => {
   let score = 0;
   const colors = ["orange", "red", "purple", "green", "blue"];
 
+  let isFirstGame = true;
+
   //The Tetrominoes
   const lTetromino = [
     [1, width + 1, width * 2 + 1, 2],
@@ -198,13 +200,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //add functionality to the button
   startBtn.addEventListener("click", () => {
+
+    //If timer has not been initiated
     if (timerId) {
       clearInterval(timerId);
       timerId = null;
     } else {
       draw();
       timerId = setInterval(moveDown, 1000);
-      nextRandom = Math.floor(Math.random() * theTetrominoes.length);
+
+      //Set next tetrimino on start/pause button only once when game is initiated
+      if (isFirstGame) {
+        nextRandom = Math.floor(Math.random() * theTetrominoes.length);
+        isFirstGame = false;
+      }
+
       displayShape();
     }
   });
