@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.btn {
+  @apply py-2 px-4 text-center tracking-wide  rounded-sm my-3 border-b-8  font-bold uppercase outline-none  transition-all duration-500 ease-out;
+}
