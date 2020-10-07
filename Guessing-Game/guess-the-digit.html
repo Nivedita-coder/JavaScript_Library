@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Begin
+var js_mult1=3141
+var js_mult2=5821
+var js_m1=100000000
+var js_m2=10000
+var js_iseed=0
+var js_iseed1=0
+var js_iseed2=0
+function random() {
+if (js_iseed == 0) {
+now = new Date()
+js_iseed = now.getHours() + now.getMinutes() * 60 + now.getSeconds() * 3600
+}
+js_iseed1 = js_iseed / js_m2
+js_iseed2 = js_iseed % js_m2
+var tmp = (((js_iseed2 * js_mult1 + js_iseed1 * js_mult2) % js_m2) *
+js_m2 + (js_iseed2 * js_mult2)) % js_m1
+js_iseed = (tmp + 1) % js_m1
+return (Math.floor((js_iseed/js_m1) * 100))
+}
+var nGuesses = 0
+
+function GuessNum() {
+var response
+var num = parseInt(document.getElementById("guess").value)
+document.getElementById("guess").value = num
+nGuesses++
+response = ""
+if (num < myNumber)    response = response + "Higher!"
+if (num > myNumber)    response = response + "Lower!"
+if (num == myNumber) {
+respone = "Correct!";
+alert ("Right!!  Reload the page to start another game....");
+}
+document.getElementById("result").value=response
+document.getElementById("guesses").value=nGuesses
+document.getElementById("guess").focus()
+document.getElementById("guess").select()
+return true
+}
+function GiveUp() {
+var response
+nGuesses = 0
+alert("The number was " + myNumber +".  Reload page to start a new game....");
+}
+// End -->
+</SCRIPT>
+</head>
+<body>
+<!-- STEP TWO: Add the onLoad event handler to the BODY tag  -->
+
+<BODY onLoad="document.getElementById('guess').focus();document.getElementById('guess').select()">
+
+<<CENTER>
+<H2>Guessing Game</H2><p>
+<font size=2><b>
+The object of this game is to guess the same number that the computer has guessed. The number will range from 1 to 100.<p></b></font>
+<SCRIPT>
+myNumber = random();
+nGuesses = 0
+</SCRIPT>
+<FORM onSubmit="GuessNum(); return false">
+Your Guess: <INPUT TYPE="text" id="guess" NAME="guess" SIZE=5>
+<INPUT TYPE="button" VALUE="     Guess...   " onClick="GuessNum();">
+<INPUT TYPE="button" VALUE="  GiveUp  " onClick="GiveUp();">
+</FORM>
+<FORM>
+<CENTER>
+#-Guesses: <INPUT TYPE="text" id="guesses" NAME="guesses" SIZE=3>
+INFO: <INPUT TYPE="text" id="result" NAME="result" SIZE=10>
+</CENTER>
+</FORM>
+</body>
+</html>

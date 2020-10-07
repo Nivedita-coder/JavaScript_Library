@@ -1,6 +1,11 @@
 //this JavaScript Code outputs random Quotes from the following arrays
 
-const quotesArray = [
+//This event will trigger when user clicks the 'Quote' button
+$("#new-quote").click(function(){
+  createQuote();
+});
+
+var quotesArray = [
     {'quote': 'Be yourself; everyone else is already taken.', 
      'author': 'Oscar Wilde'
     },
@@ -22,12 +27,12 @@ const quotesArray = [
     {'quote': 'If you want to know what a man\'s like, take a good look at how he treats his inferiors, not his equals.', 
      'author': 'J.K. Rowling'
     },
-    
 ];
 
+//Updates the text/author field in the page
 function createQuote(){
     const rand = Number.parseInt(Math.random()*quotesArray.length + 1);
-    document.querySelector('#quoteOut').textContent = `\"${quotesArray[random].quote}\"`;
-    document.querySelector('#authorOut').textContent = `--${quotesArray[random].author}`;
+    $("#text").text(quotesArray[rand].quote);
+    $("#author").text(quotesArray[rand].author);
     
 }
