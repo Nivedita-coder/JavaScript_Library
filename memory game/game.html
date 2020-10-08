@@ -1,0 +1,67 @@
+<html>
+	<head>
+		<title>Memory Game</title>
+		<link rel="stylesheet" type="text/css" href="game.css">
+		<script type="text/javascript" src="game.js"></script>
+	</head>
+	<body>
+		<h1>Welcome to Memory Game</h1>
+		<p id="instructions">The aim of the game is to match the hide picture pairs.When clicking on a box, it shows the hidden picture. When the next card is matching you have found a pair. That pair stays uncovered. If two cards are not matching, it is being covered up agian. The game is fininshed if you uncover all the pairs. Try to do it with as little tries as possible.</p>
+		<p id="follow">Please click on <strong>Start</strong> to play the game</p>
+		<table id="mainTable">
+			<tr>
+				<td><div class="img_tite" id="tdid0"><img src="images\image_0.jpg"  id="imgid0"></div></td>
+				<td ><div class="img_tite" id="tdid1" ><img src="images\image_1.jpg"  id="imgid1"></div></td>
+				<td ><div class="img_tite" id="tdid2" ><img src="images\image_2.jpg"  id="imgid2"></div></td>
+				<td ><div class="img_tite" id="tdid3"><img src="images\image_3.jpg"  id="imgid3"></div></td>
+				<td ><div class="img_tite" id="tdid4" ><img src="images\image_4.jpg"  id="imgid4"></div></td>
+				<td ><div class="img_tite" id="tdid5" ><img src="images\image_5.jpg"  id="imgid5"></div></td>
+			</tr>
+			<tr>
+				<td ><div class="img_tite" id="tdid6" ><img src="images\image_6.jpg"  id="imgid6"></div></td>
+				<td ><div class="img_tite" id="tdid7" ><img src="images\image_7.jpg"  id="imgid7"></div></td>
+				<td ><div class="img_tite" id="tdid8" ><img src="images\image_8.jpg"  id="imgid8"></div></td>
+				<td ><div class="img_tite" id="tdid9" ><img src="images\image_9.jpg"  id="imgid9"></div></td>
+				<td ><div class="img_tite" id="tdid10" ><img src="images\image_10.jpg"  id="imgid10"></div></td>
+				<td ><div class="img_tite" id="tdid11" ><img src="images\image_11.jpg"  id="imgid11"></div></td>
+			</tr>
+			<tr>
+				<td ><div class="img_tite" id="tdid12" ><img src="images\image_12.jpg"  id="imgid12"></div></td>
+				<td ><div class="img_tite" id="tdid13" ><img src="images\image_13.jpg"  id="imgid13"></div></td>
+				<td ><div class="img_tite" id="tdid14" ><img src="images\image_14.jpg"  id="imgid14"></div></td>
+				<td ><div class="img_tite" id="tdid15" ><img src="images\image_15.jpg"  id="imgid15"></div></td>
+				<td ><div class="img_tite" id="tdid16" ><img src="images\image_16.jpg"  id="imgid16"></div></td>
+				<td ><div class="img_tite" id="tdid17" ><img src="images\image_17.jpg"  id="imgid17"></div></td>
+			</tr>
+			<tr>
+				<td ><div class="img_tite" id="tdid18" ><img src="images\image_0.jpg"  id="imgid18"></div></td>
+				<td ><div class="img_tite" id="tdid19" ><img src="images\image_1.jpg"  id="imgid19"></div></td>
+				<td ><div class="img_tite" id="tdid20" ><img src="images\image_2.jpg"  id="imgid20"></div></td>
+				<td ><div class="img_tite" id="tdid21" ><img src="images\image_3.jpg"  id="imgid21"></div></td>
+				<td ><div class="img_tite" id="tdid22" ><img src="images\image_4.jpg"  id="imgid22"></div></td>
+				<td ><div class="img_tite" id="tdid23" ><img src="images\image_5.jpg"  id="imgid23"></div></td>
+			</tr>
+			<tr>
+				<td ><div class="img_tite" id="tdid24" ><img src="images\image_6.jpg"  id="imgid24"></div></td>
+				<td ><div class="img_tite" id="tdid25" ><img src="images\image_7.jpg"  id="imgid25"></div></td>
+				<td ><div class="img_tite" id="tdid26" ><img src="images\image_8.jpg"  id="imgid26"></div></td>
+				<td ><div class="img_tite" id="tdid27" ><img src="images\image_9.jpg"  id="imgid27"></div></td>
+				<td ><div class="img_tite" id="tdid28" ><img src="images\image_10.jpg"  id="imgid28"></div></td>
+				<td ><div class="img_tite" id="tdid29" ><img src="images\image_11.jpg"  id="imgid29"></div></td>
+			</tr>
+			<tr>
+				<td ><div class="img_tite" id="tdid30" ><img src="images\image_12.jpg"  id="imgid30"></div></td>
+				<td ><div class="img_tite" id="tdid31" ><img src="images\image_13.jpg"  id="imgid31"></div></td>
+				<td ><div class="img_tite" id="tdid32" ><img src="images\image_14.jpg"  id="imgid32"></div></td>
+				<td ><div class="img_tite" id="tdid33" ><img src="images\image_15.jpg"  id="imgid33"></div></td>
+				<td ><div class="img_tite" id="tdid34" ><img src="images\image_16.jpg"  id="imgid34"></div></td>
+				<td id="tdid35"><div class="img_tite" id="tdid35" ><img src="images\image_17.jpg"  id="imgid35"></div></td>
+			</tr>
+		</table>	
+		<div id="below">
+			<label id="minutes">00</label>:<label id="seconds">00</label>
+			Clicks:<span id="clickSpan">0</span> 
+			<button onclick="startGame();" id="start">Start</button>	
+		</div>
+	</body>
+</html>
