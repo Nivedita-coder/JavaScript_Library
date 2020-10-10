@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Cipher machine</title>
+  </head>
+  <body>
+    <form>
+      <h1>My Cipher machine</h1>
+      <p id="titleId">Plain text</p>
+
+      <div>
+        <textarea
+          name="sourceText"
+          rows="8"
+          cols="50"
+          spellcheck="false"
+          value=""
+        >
+        </textarea>
+      </div>
+
+      <div>
+        <label for="shift">Shift:</label>
+        <select id="shift" name="shift">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="5">5</option>
+          <option value="10">10</option>
+        </select>
+      </div>
+
+      <div>
+        <input
+          type="button"
+          id="decrypt"
+          value="Encrypt"
+          onclick="encryptText();"
+        />
+        <input
+          type="button"
+          id="decrypt"
+          value="Decrypt the text"
+          onclick="decryptText();"
+        />
+      </div>
+    </form>
+    <script src="app.js"></script>
+  </body>
+</html>
