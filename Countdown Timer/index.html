@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!--css files-->
+    <link rel="stylesheet" href="css/countdownStyle.css">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+    <!--Moment.js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+
+<div class="container">
+    <div id="clock" class="card">
+        <div class="card-body">
+            <h2 id="countdown-heading" class="card-title mb-3">Let's Countdown... </h2>
+            <div class="enter-date-time-section">
+                <p class="choose-time-subheading"> Choose End Time</p>
+                <input id="endTime" type="datetime-local">
+                <button id="start" onclick="receiveEndTime()">Start CountDown!!</button>
+            </div>
+            <div class="clock-section ">
+                <div id="days" class="value text-warning">00</div>
+                <div class="clock-label">DAYS</div>
+            </div>
+            <div class="clock-section">
+                <div id="hours" class="value text-warning">00</div>
+                <div class="clock-label">HOURS</div>
+            </div>
+            <div class="clock-section">
+                <div id="minutes" class="value text-warning">00</div>
+                <div class="clock-label">MINUTES</div>
+            </div>
+            <div class="clock-section">
+                <div id="seconds" class="value text-warning">00</div>
+                <div class="clock-label">SECONDS</div>
+            </div>
+        </div>
+    </div>
+</div>
+    <script src="js/countdown.js"></script>
+
+</body>
+
+</html>
