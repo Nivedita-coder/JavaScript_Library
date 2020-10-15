@@ -1,0 +1,36 @@
+body {  background-color: #f7fafd; }
+
+#clock {
+  text-align: center;
+  margin-top: 70px;
+  box-shadow: 0 0 20px #6086b54d; 
+}
+
+.clock-section { display: inline-block; }
+
+ .clock-section .value {
+  width: 100px;
+  height: 100px;
+  line-height:100px;
+  background-color: #333;
+  text-align: center;
+  border-radius: 10px;
+}
+.value {
+  font-size: 50px;
+}
+.clock-label {
+  text-align: center;
+  padding-top: 4px;
+  font-size: 11px;
+}
+.enter-date-time-section{
+  background-color: #f7fafd;
+  padding: 5%;
+  padding-top: 3%;
+  margin-bottom:1% ;
+}
+
+.card-title{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
